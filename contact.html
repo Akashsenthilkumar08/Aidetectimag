@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - AI Detection App</title>
+  <meta name="description" content="Get in touch with us for support or feedback." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-layout">
+    <div id="sidebar"></div>
+    <main class="main-content" data-page="contact">
+      <div class="page-header">
+        <div>
+          <h1>📞 Contact Us</h1>
+          <p class="page-header-sub">We'd love to hear from you</p>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-form-card">
+          <h2>Send a Message</h2>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="contactName">Name</label>
+              <input type="text" id="contactName" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email</label>
+              <input type="email" id="contactEmail" placeholder="Your email address" required />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" placeholder="How can we help you?" required></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Send Message</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-info-card">
+          <h2>Get in Touch</h2>
+          
+          <div class="contact-item">
+            <div class="contact-item-icon">📧</div>
+            <div class="contact-item-text">
+              <h4>Email</h4>
+              <p><a href="mailto:akashsen2026@gmail.com" style="color: inherit; text-decoration: none;">akashsen2026@gmail.com</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-item-icon">💼</div>
+            <div class="contact-item-text">
+              <h4>LinkedIn</h4>
+              <p><a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: inherit; text-decoration: none;">linkedin.com/in/yourprofile</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">💻</div>
+            <div class="contact-item-text">
+              <h4>GitHub</h4>
+              <p><a href="https://github.com/yourusername" target="_blank" style="color: inherit; text-decoration: none;">github.com/yourusername</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text">
+              <h4>Location</h4>
+              <p>West Bengal, India</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">🕒</div>
+            <div class="contact-item-text">
+              <h4>Available</h4>
+              <p>Monday – Friday<br/>9:00 AM – 6:00 PM (IST)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
