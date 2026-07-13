@@ -211,7 +211,7 @@ function renderSidebar() {
   if (logoutBtn) {
     logoutBtn.addEventListener("click", () => {
       firebaseSignOut()
-        .then(() => { window.location.href = "login.html"; })
+        .then(() => { window.location.href = "http://localhost:8000/index.html"; })
         .catch((error) => { alert(error.message || "Logout failed."); });
     });
   }
@@ -235,7 +235,7 @@ function initDashboard() {
 
   firebase.auth().onAuthStateChanged((user) => {
     if (!user) {
-      window.location.href = "login.html";
+      window.location.href = "index.html";
       return;
     }
     // Fetch profile from Firestore for display name + username
@@ -1039,7 +1039,7 @@ function initAnalyticsPage() {
 
   firebase.auth().onAuthStateChanged((user) => {
     if (!user) {
-      window.location.href = "login.html";
+      window.location.href = "index.html";
       return;
     }
 
@@ -1348,7 +1348,7 @@ function initNewsPage() {
 
   firebase.auth().onAuthStateChanged((user) => {
     if (!user) {
-      window.location.href = "login.html";
+      window.location.href = "index.html";
       return;
     }
     
@@ -1396,7 +1396,7 @@ function initSavedNewsPage() {
 
   firebase.auth().onAuthStateChanged((user) => {
     if (!user) {
-      window.location.href = "login.html";
+      window.location.href = "index.html";
       return;
     }
 
@@ -1505,7 +1505,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector('[data-page="profile"]')) {
     firebase.auth().onAuthStateChanged((user) => {
       if (!user) {
-        window.location.href = "login.html";
+        window.location.href = "index.html";
         return;
       }
       initProfilePage(user);
