@@ -493,7 +493,7 @@ function initDetectPage() {
     const formData = new FormData();
     formData.append("image", currentFile);
 
-    fetch("https://aidetectimage.onrender.com/predict", {
+    fetch("http://127.0.0.1:5000/predict", {
       method: "POST",
       body: formData
     })
@@ -1324,7 +1324,7 @@ function fetchAndRenderNews(query = "artificial intelligence") {
   Promise.all([
     user ? db.collection("saved_news").where("userId", "==", user.uid).get().catch(() => ({docs:[]})) : Promise.resolve({docs:[]}),
     user ? db.collection("liked_news").where("userId", "==", user.uid).get().catch(() => ({docs:[]})) : Promise.resolve({docs:[]}),
-    fetch(`https://aidetectimage.onrender.com/api/news?q=${encodeURIComponent(query)}`).then(res => res.json()).catch(err => { console.error(err); return null; }),
+    fetch(`http://127.0.0.1:5000/api/news?q=${encodeURIComponent(query)}`).then(res => res.json()).catch(err => { console.error(err); return null; }),
     minDelay
   ]).then(([savedSnap, likedSnap, data]) => {
     const savedUrls = new Set(savedSnap.docs.map(d => d.data().url));
